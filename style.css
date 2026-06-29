@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("img/bg.png");
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#envelopeContainer {
+    position: fixed;
+    left: 80px;
+    bottom: 40px;
+    width: 320px;
+}
+
+#closedEnvelope,
+#openEnvelope {
+    width: 130%;
+    cursor: pointer;
+}
+
+#openEnvelope {
+    position: absolute;
+    bottom: 50px;
+    left: -15px;
+}
+
+.paper {
+    position: fixed;
+    width: 450px;
+    height: 600px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    background-image: url("img/paper.png");
+    background-size: cover;
+    background-position: center;
+
+    padding: 45px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: 10;
+
+    overflow: hidden;
+}
+
+.paper.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+h2 {
+    position: relative;
+    color: #6b4c4c;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    top: 30px;
+    line-height: 3.0;
+}
+
+.letter {
+    font-family: 'Caveat', cursive;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.letter p {
+    color: #6b4c4c;
+    font-size: 16px;
+    text-align: left;
+}
+
+.bodyText {
+    color: #6b4c4c;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.signature {
+    position: absolute;
+    right: 35px;
+    bottom: 100px;
+    
+    color: #6b4c4c;
+    font-size: 16px;
+    text-align: right;
+}
+
+#buttonSection {
+    position: fixed;
+    top: 128px;
+    left: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 200px;
+    height: 45px;
+
+    z-index: 20;
+}
+
+#buttonSection button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 12px 32px;
+
+    border: 2px solid #0c0c0b;
+    border-radius: 17px;
+
+    background: #ad7687;
+    color: #fcfbc0;
+
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+#loveSection {
+    position: fixed;
+    top: 128px;
+    left: 175px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    z-index: 20;
+}
+
+#loveButton {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 12px 22px;
+
+    border: 2px solid #0c0c0b;
+    border-radius: 17px;
+
+    background:#ad7687;
+    color:#fcfbc0;
+
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+
+    pointer-events: none;
+    cursor: default;
+}
+
+.answerRow {
+    display:flex;
+    justify-content:space-between;
+    gap: 12px;
+}
+
+.answerRow button {
+
+    border: 2px solid #0c0c0b;
+    border-radius: 18px;
+
+    background:#ad7687;
+    color:#fcfbc0;
+
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 2px solid #0c0c0b;
+    border-radius: 17px;
+
+    width: 140px;
+    height: 45px;
+}
+
+#ofcourseBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 2px solid #0c0c0b;
+    border-radius: 17px;
+
+    width: 160px;
+    height: 45px;
+}
+
+.photoSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 55px;
+}
+
+.photoTitle {
+    position: static;
+;
+    margin-top: 10px;
+    margin-right: 20px;
+
+    color: #6b4c4c;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+#photo {
+    width: 250px;
+    height: auto;
+
+    border: 8px solid #f3a8cb;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #envelopeContainer {
+        left: 50%;
+        bottom: 30px;
+        width: 200px;
+        transform: translateX(-50%);
+    }
+
+    #closedEnvelope {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #openEnvelope {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .paper {
+        width: 90vw;
+        max-width: 340px;
+        height: 60vh;
+        max-height: 460px;
+        padding: 20px;
+        top: -460px;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin-left: 8px;
+        margin-bottom: 10px;
+        top: 10px;
+        line-height: 2;
+    }
+
+    .bodyText {
+        font-size: 13px;
+        margin-left: 12px;
+    }
+
+    .signature {
+        font-size: 13px;
+        right: 12px;
+        bottom: 50px;
+    }
+
+    #buttonSection {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        max-width: 200px;
+    }
+
+    #buttonSection button {
+        font-size: 15px;
+        padding: 8px 18px;
+    }
+
+    #loveSection {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 240px;
+    }
+
+    #loveButton {
+        font-size: 15px;
+        padding: 8px 14px;
+    }
+
+    .answerRow {
+        gap: 8px;
+    }
+
+    .answerRow button {
+        font-size: 14px;
+    }
+
+    #yesBtn {
+        width: 90px;
+        height: 38px;
+    }
+
+    #ofcourseBtn {
+        width: 110px;
+        height: 38px;
+    }
+
+    .photoTitle {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    #photo {
+        width: 160px;
+        border-width: 6px;
+    }
+
+}

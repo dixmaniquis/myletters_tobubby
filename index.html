@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters for you!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id = "music" loop>
+        <source src="audio/you_make_it_right.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class = "container">
+
+        <div id = "envelopeContainer">
+
+            <img
+                src = "img/close_enve.png" id = "closedEnvelope" alt = "Closed Envelope"
+            >
+            <img
+                src = "img/open_enve.png" id = "openEnvelope" class = "hidden" alt = "Open Envelope"
+            >
+
+            <div class = "paper hidden" id = "paper">
+
+                <div class = "letter" id = "letter">
+
+                    <h2 class="letterTitle">Hello bubby,</h2>
+
+                    <p class = "bodyText">
+                        Letter here akjdhaldalkdjada oiahdoiadla liajsdaknsd laishdaiksndali
+                    </p>
+
+                    <div class = "signature">
+                        love,<br>
+                        Dixie
+                    </div>
+
+                </div>
+
+                <div class="photoSection hidden" id="photoSection">
+                    <h2 class="photoTitle">Your girlfriend's pretty face today!</h2>
+                    
+                    <img src="img/photo.png" id="photo">
+                </div>
+
+            </div>
+
+         </div>
+
+    </div>
+
+        <div id = "buttonSection" class = "hidden">
+
+            <button id = "doneBtn">Done reading?</button>
+        </div>
+
+            <div id = "loveSection" class = "hidden">
+                
+                <div id = "loveButton">
+                    Do you love me?
+                </div>
+
+                <div class = "answerRow">
+
+                    <button id = "yesBtn">Yes</button>
+
+                    <span></span>
+
+                    <button id = "ofcourseBtn">Yes, sobra!!!</button>
+
+                </div>
+
+            </div>
+
+    </div>
+
+    <script src = "script.js"></script>
+
+</body>
+</html>
